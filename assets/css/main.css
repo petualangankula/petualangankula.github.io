@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Acme');
+body {
+    overflow-x: hidden;
+}
+#cover {
+
+height:100vh;
+ background-image: linear-gradient(0deg, #b4e0ef, #30c1f2);
+    
+}
+#features {
+    height:100vh;
+    padding-top:100px;
+    background-image: url("../images/background.png");
+    background-size: 300px;
+    
+    
+}
+#main-logo {
+    z-index: 200;
+    text-align: center;
+    padding-top: 30px;
+    position:relative;
+}
+
+#main-logo img {
+    width:600px;
+}
+#awan {
+    z-index: 100;
+}
+#awan img {
+     position:absolute;
+}
+#awan img:first-child {
+   
+    top:200px;
+    left:-400px;
+}
+#awan img:last-child{
+    top:500px;
+    right:-400px;
+}
+.caption {
+    position:relative;
+    text-align: center;
+    top:-30px
+}
+.caption h2{
+    font-weight: bold;
+    font-size:40px;
+    color:white;
+    font-family: "Acme"
+}
+.blue {
+    color: #1986b4;
+}
+.store {
+    text-align: center;
+    position:relative;
+}
+#footer {
+    background-color:#87513c;
+    height:100vh;
+     
+}
+.slide {
+    position:relative;
+	float:left;
+	left: 0;
+    
+}
+.slider-container {
+    margin-left:auto;
+    margin-right: auto;
+     border: 20px solid #1986b4;
+    border-radius: 20px;
+    height:440px;
+    background:white;
+    width:750px;
+    position:relative;
+    overflow: hidden;
+}
+.slider {
+   position: relative;
+	height: 440px;
+    width:3000px;
+	padding:0;
+	left:0;
+}
+.navigation {
+    width:1000px;
+    position:relative;
+    top:-250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.navigation .nav-left {
+    float:left;
+    transform:rotate(180deg);
+}
+.navigation .nav-right {
+    float:right;
+}
+
+
+.nav {
+  
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+.nav-left:hover {
+  -webkit-transform: rotate(540deg);
+          transform: rotate(540deg);
+}
+.nav-right:hover {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+.slide-caption h2 {
+    clear: both;
+    position:relative;
+    top:-80px;
+    font-family: "Acme";
+    color:#1986b4;
+    font-size:30px;
+    text-align: center;
+    
+}
+.store img{
+     -webkit-transition: -webkit-transform .6s ease-in-out;
+          transition:         transform .6s ease-in-out;
+    margin:10px;
+}
+.store img:hover {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+.footer-caption h2 {
+   font-family: "Acme";
+    color:white;
+    font-size:40px;
+    text-align: center;
+    position:relative;
+    left:-500px;
+    opacity: 0;
+}
+.rock {
+    background-image:url("../images/rock.png");
+    background-size: 220px;
+    width: 100%;
+    height:100px;
+}
+#footer img {
+    position:relative;
+    left:-600px;
+}
+.logo {
+    position:absolute;
+    width:100%
+}
+.logo-item {
+    float:right;
+}
+.logo-gemastik {
+    margin-right:100px;
+    
+}
+.logo-um {
+    margin-right:20px;
+}

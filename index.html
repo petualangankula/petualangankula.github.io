@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Hello, world!</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+<body>
+
+<section id="cover">
+   <div class='header'>
+      
+   </div>
+   <div class="logo">
+      
+       <img width="100" class="logo-item logo-gemastik" src="assets/images/gemastik.png" alt="">
+        <img width="100" class="logo-item logo-um" src="assets/images/um.png" alt="">
+   </div>
+    <div id="main-logo">
+        <img src="assets/images/logo.png" />
+    </div>
+    <div id="awan">
+        <img src="assets/images/awan.png" /><br>
+        <img src="assets/images/awan.png" />
+    </div>
+    <div class="caption">
+        <h2>Susun <span class="blue">Rencana</span> Dan <span class="blue">Jalankan</span></h2>
+    </div>
+    <div class="store">
+        <img width="200" src="assets/images/appstore.png" alt="">
+         <img width="200" src="assets/images/playstore-soon.png" alt="">
+    </div>
+</section>
+<section id="features">
+    
+    <div class="slider-container">
+       <ul class="slider">
+        <li class="slide slide-1">
+            <img src="./assets/images/slide-1.png" width="710" alt="">
+        </li>
+        <li class="slide slide-2">
+            <img src="./assets/images/slide-1.png" width="710" alt="">
+        </li>
+        <li class="slide slide-3">
+            <img src="./assets/images/slide-1.png" width="710" alt="">
+        </li>
+        <li class="slide slide-4">
+            <img src="./assets/images/slide-1.png" width="710" alt="">
+           </li>
+        </ul>
+    </div>
+    <div class="navigation">
+    <div class="nav nav-left"><img src="assets/images/arrow.png" width="90" alt=""></div>
+    <div class="nav nav-right"><img src="assets/images/arrow.png" width="90" alt=""></div>
+    </div>
+    <div class="slide-caption"><h2>Ini adalah caption 1</h2></div>
+</section>  
+<section id="footer">
+    <div class="rock"></div>
+     <div class="footer-caption"><h2>Keunggulan</h2></div>
+     <img src="assets/images/kula.png"/>
+</section>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="assets/js/anime.min.js"></script>
+<script src="./assets/js/jquery-3.2.1.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/jquery.scrollify.min.js"></script>
+<script>
+    let captions = ["Ayo temukan dimana bendera merah putih!!","Rencanakan dan Jalankan!!","Turn Based Action","Gemastik 2017"]
+     anime({
+        targets: '#awan img:first-child',
+        translateX: screen.width + 600,
+        duration: 20000,
+        easing:"linear",
+        loop: true
+    });
+     anime({
+        targets: '#awan img:last-child',
+        translateX: -screen.width - 600,
+        duration: 14000,
+        easing:"linear",
+        loop: true
+    });
+    $(".slide-caption h2").html(captions[0]);
+
+    let i = 0;
+    const num = $(".slide").length;
+    $('.nav-left').hide();
+    $('.nav-right').on("click",function(){
+       
+        if(i < num-1){
+             $('.nav-left').show();
+             i++;
+            $(".slide-caption h2").html(captions[i]);
+
+             if(i == num-1){
+               
+                $('.nav-right').hide();
+            }
+            $('.slider').animate({
+            left: "-=710",
+          }, 500, function() {
+           
+          });
+        } 
+       
+    });
+    $('.nav-left').on("click",function(){
+        if(i>0){
+            $('.nav-right').show();
+            i--;
+            $(".slide-caption h2").html(captions[i]);
+             if(i == 0){
+                $('.nav-left').hide();
+            }
+            $('.slider').animate({
+            left: "+=710",
+          }, 500, function() {
+            
+          });
+        }
+        
+    });
+    
+     $(function() {
+          $.scrollify({
+            section : "section",
+              after: function(index,sections){
+                  if(index == 2){
+                      anime({
+                            targets: '#footer h2',
+                            translateX:  500,
+                            opacity: 1,
+                            easing:"easeInOutQuad",
+                            duration: 500
+                          });
+                          anime({
+                            targets: '#footer img',
+                            translateX:  600,
+                            duration: 1000,
+                            easing:"easeInOutQuad"
+                        
+                          });
+                      
+                  }
+              }
+          });
+        });
+</script>
+</body>
+</html>
